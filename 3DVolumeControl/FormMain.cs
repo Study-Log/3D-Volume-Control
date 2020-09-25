@@ -141,7 +141,7 @@ namespace _3DVolumeControl
         // Let's use the z rotation to control the volume
         int volume = e.RotationVector.Z;
         Debug.WriteLine("Volume: " + volume.ToString());
-        if (delta.Milliseconds > 350 - Math.Abs(volume))
+        if (delta.Milliseconds > 200 &&  Math.Abs(volume) > 300)
         {          
           if (volume > 0)
           {
